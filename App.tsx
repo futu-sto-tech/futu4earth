@@ -1,30 +1,15 @@
 import * as React from "react";
 
-import { Button, StyleSheet, Text, View } from "react-native";
-
-import { NavigationContainer, useNavigation } from "@react-navigation/native";
-import { colors } from "./colors";
-import { createNativeStackNavigator, NativeStackScreenProps } from "@react-navigation/native-stack";
-
-type HomeScreenNavigationProps = NativeStackScreenProps<RootStackParamList, 'Home'>;
-function HomeScreen({}) {
-  const navigation = useNavigation<HomeScreenNavigationProps>();
-
-  return (
-    <View style={styles.container}>
-      <Text>Home Screen</Text>
-      <Button onPress={() => navigation.navigation.push('Analysis')} title="test">Test</Button>
-    </View>
-  );
-}
+import { HomeScreen } from "./screens/HomeScreen";
+import { NavigationContainer } from "@react-navigation/native";
+import { Text } from "react-native";
+import { createNativeStackNavigator } from "@react-navigation/native-stack";
 
 function AnalysisScreen({}) {
-  return (
-    <View>Analysis</View>
-  )
+  return <Text>Analysis</Text>;
 }
 
-type RootStackParamList = {
+export type RootStackParamList = {
   Home: undefined;
   Analysis: undefined;
   Report: undefined;
@@ -43,12 +28,3 @@ export default function App() {
     </NavigationContainer>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: colors.brand.secondary,
-    alignItems: "center",
-    justifyContent: "center",
-  },
-});
