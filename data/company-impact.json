@@ -1,0 +1,43 @@
+{
+    "industries": {
+        "technology": {
+            "companies": {
+                "Apple Inc.": {
+                    "impact": -1.9
+                },
+                "Samsung Electronics": {
+                    "impact": -2.0
+                },
+                "Nokia": {
+                    "impact": -0.8
+                }
+            }
+        },
+        "clothing": {
+            "companies": {
+                "Target": {
+                    "impact": -1.4
+                },
+                "Nike": {
+                    "impact": -4.2
+                },
+                "Walmart": {
+                    "impact": -1.4
+                }
+            }
+        },
+        "investment": {
+            "companies": {
+                "Shell": {
+                    "impact": -11.8
+                },
+                "Veolia Environement": {
+                    "impact": 2.8
+                },
+                "Walt Disney": {
+                    "impact": -0.2
+                }
+            }
+        }
+    }
+}
