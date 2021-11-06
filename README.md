@@ -14,3 +14,11 @@ The app is supposed to be a supporting tool for tracking your environmental impa
 - [Joséphine Östman](https://github.com/code-crow1337)
 - [Caique Peixoto](https://github.com/caique)
 - [Sander Nobel](https://github.com/sano2019)
+
+
+### See it in Action:
+Run ```npm install``` and ```npm install expo-cli``` if you do not have it installed globally. 
+
+To run the app you run ```npm run start``` and follow the command line instructions to run it through your favorite mobile app simulator (ex. Xcode) or in web view. 
+
+Click around and explore the wonderful insights brought to you by the Sustainability Insights app! 
