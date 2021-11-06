@@ -2,9 +2,11 @@ import { StyleSheet, View } from "react-native";
 
 import { Button } from "react-native-paper";
 import { NativeStackScreenProps } from "@react-navigation/native-stack";
-import React from "react";
+import * as React from "react";
 import { RootStackParamList } from "../App";
 import { colors } from "../colors";
+import { SafeAreaView } from "react-native-safe-area-context";
+
 
 type HomeScreenNavigationProps = NativeStackScreenProps<
   RootStackParamList,
@@ -20,10 +22,10 @@ const styles = StyleSheet.create({
   },
   button: {
     backgroundColor: colors.brand.tertiary,
-    paddingLeft: "32px",
-    paddingRight: "32px",
-    paddingTop: "16px",
-    paddingBottom: "16px",
+    paddingLeft: 16,
+    paddingRight: 16,
+    paddingTop: 4,
+    paddingBottom: 4,
     marginBottom: "25%",
     borderRadius: 50,
   },
@@ -34,7 +36,7 @@ const styles = StyleSheet.create({
 
 export function HomeScreen({ navigation }: HomeScreenNavigationProps) {
   return (
-    <View style={styles.container}>
+    <SafeAreaView style={styles.container}>
       <Button
         style={styles.button}
         onPress={() => navigation.push("Analysis")}
@@ -42,6 +44,6 @@ export function HomeScreen({ navigation }: HomeScreenNavigationProps) {
       >
         Start Analysis
       </Button>
-    </View>
+    </SafeAreaView>
   );
 }
