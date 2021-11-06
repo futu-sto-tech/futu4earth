@@ -15,7 +15,18 @@ type AnalysisScreenNavigationProps = NativeStackScreenProps<
 export function AnalysisScreen({}) {
   return (
     <SafeAreaView style={styles.container}>
-      <Text>Analysis Is What We Like</Text>
+        <Button
+        style={styles.addButton}
+        onPress={() => console.log("Adding Company")}
+        labelStyle={styles.addText}
+      >
+        +
+      </Button>
+      <Button
+        style={styles.button}
+        onPress={() => console.log("Running Analysis")}
+        labelStyle={styles.text}
+      >Run analysis</Button>
     </SafeAreaView>
   );
 }
@@ -25,6 +36,28 @@ const styles = StyleSheet.create({
     backgroundColor: colors.bg.secondary,
     flex: 1,
     alignItems: "center",
-    justifyContent: "center",
+    justifyContent: "flex-end",
   },
+  button: {
+    backgroundColor: colors.brand.tertiary,
+    paddingLeft: 16,
+    paddingRight: 16,
+    paddingTop: 4,
+    paddingBottom: 4,
+    borderRadius: 50,
+  },
+  text: {
+    color: colors.text.primary,
+  },
+  addText: {
+    color: colors.text.secondary,
+    fontSize: 24,
+  },
+  addButton: {
+      borderRadius: 100,
+      backgroundColor: colors.brand.primary,
+      padding: 24,
+      marginBottom: 20,
+
+  }
 });
